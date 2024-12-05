@@ -24,25 +24,27 @@ function installDep(){
 	cd ~
 	sudo apt update
 	sudo apt upgrade
-	sudo apt install -f python3 python3-pip python3-dev python3-setuptools python3-venv git libyaml-dev build-essential libffi-dev libssl-dev
+	sudo apt install -y python3 python3-pip python3-dev python3-setuptools python3-venv git libyaml-dev build-essential libffi-dev libssl-dev
 	mkdir OctoPrint && cd OctoPrint
 	python3 -m venv venv
 	source venv/bin/activate
 	pip install --upgrade pip wheel
 	pip install octoprint
 	pip install "https://github.com/thelastWallE/OctoprintKlipperPlugin/archive/master.zip"
+	pip install "https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/archive/master.zip"
+	pip install "https://github.com/LazeMSS/OctoPrint-UICustomizer/archive/main.zip"
 	sudo usermod -a -G tty octopi
 	sudo usermod -a -G dialout octopi
 	cd ~
 	sudo mv octoprint.service /etc/systemd/system/octoprint.service
 	sudo systemctl enable octoprint.service
 	sudo service octoprint start
-	sudo apt install -f haproxy
+	sudo apt install -y haproxy
 	sudo mv /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfgCP
 	sudo mv haproxy.cfg /etc/haproxy/haproxy.cfg
 	sudo systemctl enable haproxy.service
 	sudo service haproxy start
-	sudo apt install -f subversion libjpeg62-turbo-dev imagemagick ffmpeg libv4l-dev cmake
+	sudo apt install -y subversion libjpeg62-turbo-dev imagemagick ffmpeg libv4l-dev cmake
 	cd ~
 	git clone https://github.com/jacksonliam/mjpg-streamer.git
 	cd mjpg-streamer/mjpg-streamer-experimental
@@ -62,6 +64,7 @@ function installDep(){
 	mv install-octopi.sh klipper/scripts/install-octopi.sh
 	./klipper/scripts/install-octopi.sh
 	echo -e "${green}###### Installation OK ######${white}"; echo
+
 	main
 	
 }
