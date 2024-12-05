@@ -7,37 +7,37 @@
 ###
 
 <div align="center">
-  <img height="200" src="img/p1.png"  />
+  <img height="400" src="img/p1.png"  />
 </div>
 <div align="center">
-  <img height="200" src="img/p2.png"  />
+  <img height="400" src="img/p2.png"  />
 </div>
 <div align="center">
-  <img height="200" src="img/p3.png"  />
+  <img height="400" src="img/p3.png"  />
 </div>
 <div align="center">
-  <img height="200" src="img/p4.png"  />
+  <img height="400" src="img/p4.png"  />
 </div>
 <div align="center">
-  <img height="200" src="img/p5.png"  />
+  <img height="400" src="img/p5.png"  />
 </div>
 <div align="center">
-  <img height="200" src="img/p6.png"  />
+  <img height="400" src="img/p6.png"  />
 </div>
 <div align="center">
-  <img height="200" src="img/p7.png"  />
+  <img height="400" src="img/p7.png"  />
 </div>
 <div align="center">
-  <img height="200" src="img/p8.png"  />
+  <img height="400" src="img/p8.png"  />
 </div>
 <div align="center">
-  <img height="200" src="img/p9.png"  />
+  <img height="400" src="img/p9.png"  />
 </div>
 <div align="center">
-  <img height="200" src="img/p10.png"  />
+  <img height="400" src="img/p10.png"  />
 </div>
 <div align="center">
-  <img height="200" src="img/p11.png"  />
+  <img height="400" src="img/p11.png"  />
 </div>
 
 ###
