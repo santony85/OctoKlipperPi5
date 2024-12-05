@@ -24,7 +24,7 @@ function installDep(){
 	cd ~
 	sudo apt update
 	sudo apt upgrade
-	sudo apt install python3 python3-pip python3-dev python3-setuptools python3-venv git libyaml-dev build-essential libffi-dev libssl-dev
+	sudo apt install -f python3 python3-pip python3-dev python3-setuptools python3-venv git libyaml-dev build-essential libffi-dev libssl-dev
 	mkdir OctoPrint && cd OctoPrint
 	python3 -m venv venv
 	source venv/bin/activate
@@ -37,12 +37,12 @@ function installDep(){
 	sudo mv octoprint.service /etc/systemd/system/octoprint.service
 	sudo systemctl enable octoprint.service
 	sudo service octoprint start
-	sudo apt install haproxy
+	sudo apt install -f haproxy
 	sudo mv /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfgCP
 	sudo mv haproxy.cfg /etc/haproxy/haproxy.cfg
 	sudo systemctl enable haproxy.service
 	sudo service haproxy start
-	sudo apt install subversion libjpeg62-turbo-dev imagemagick ffmpeg libv4l-dev cmake
+	sudo apt install -f subversion libjpeg62-turbo-dev imagemagick ffmpeg libv4l-dev cmake
 	cd ~
 	git clone https://github.com/jacksonliam/mjpg-streamer.git
 	cd mjpg-streamer/mjpg-streamer-experimental
