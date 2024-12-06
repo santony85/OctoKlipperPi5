@@ -1,0 +1,88 @@
+api:
+  key: 968F8EF926134E138606C1D8F1067544
+plugins:
+  announcements:
+    _config_version: 1
+  bedlevelvisualizer:
+    _config_version: 1
+    command: |
+      @BEDLEVELVISUALIZER
+      BED_MESH_CLEAR
+      G28
+      G28 Z
+      BED_MESH_CALIBRATE
+      G28 Z
+      BED_MESH_OUTPUT PGP=0
+  classicwebcam:
+    _config_version: 1
+    snapshot: http://127.0.0.1:8080/?action=snapshot
+    stream: /webcam/?action=stream
+  discovery:
+    publicPort: 80
+    upnpUuid: e67b6d4e-1af1-4d54-812e-3a7c4e0f8a3c
+  errortracking:
+    unique_id: 74323919-ba80-4e2a-a601-7320b39cd536
+  gcodeviewer:
+    _config_version: 1
+  klipper:
+    _config_version: 4
+    configuration:
+      confirm_reload: false
+    probe:
+      points:
+      - name: point-1
+        x: '112.5'
+        y: '112.5'
+  octoeverywhere:
+    AddPrinterUrl: https://octoeverywhere.com/getstarted?isFromOctoPrint=true&printerid=0V0RV66J58H15CN4FTE548T7YHMM3C9IVNX5H7HE7OPC5PLI4ZI4RQ6KN043
+    HasConnectedAccounts: true
+    NoAccountConnectedLastInformDateTime: 2023-11-18 11:23:28.721437
+    Pid: xv29whRiE5rzPy0xqdoYntwUBj9zzDCcjBFr8jq2bPDbEOTUe3fz3JWku1WK38T9xqcOsvPX9NBJHfp7
+    PluginUpdateRequired: false
+    PluginVersion: 3.6.3
+    PrinterKey: 0V0RV66J58H15CN4FTE548T7YHMM3C9IVNX5H7HE7OPC5PLI4ZI4RQ6KN043
+  softwareupdate:
+    _config_version: 9
+  tracking:
+    enabled: false
+    unique_id: 11629333-3b8b-4e4f-a7fa-1daccc083e00
+  virtual_printer:
+    _config_version: 1
+printerProfiles:
+  default: _default
+serial:
+  additionalPorts:
+  - /tmp/printer
+  autoconnect: true
+  log: true
+server:
+  commands:
+    serverRestartCommand: sudo service octoprint restart
+    systemRestartCommand: sudo shutdown -r now
+    systemShutdownCommand: sudo shutdown -h now
+  firstRun: false
+  onlineCheck:
+    enabled: true
+  pluginBlacklist:
+    enabled: false
+  secretKey: xUCsxnvITioR3Nju0qDfKu1etGYFEyIi
+  seenWizards:
+    backup: null
+    classicwebcam: 1
+    corewizard: 4
+    file_check: 1
+    octoeverywhere: 10
+    powerfailure: 2
+    tracking: null
+temperature:
+  profiles:
+  - bed: 100
+    chamber: null
+    extruder: 210
+    name: ABS
+  - bed: 60
+    chamber: null
+    extruder: 180
+    name: PLA
+webcam:
+  ffmpeg: /usr/bin/ffmpeg
