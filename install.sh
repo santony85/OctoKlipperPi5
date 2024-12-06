@@ -72,6 +72,7 @@ function installPlugins(){
 	cd ~
 	cd OctoPrint
 	source venv/bin/activate
+	 pip install yaml --break-system-packages
 	pip install "https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/archive/master.zip"
 	pip install "https://github.com/LazeMSS/OctoPrint-UICustomizer/archive/main.zip"
 	pip install "https://github.com/QuinnDamerell/OctoPrint-OctoEverywhere/archive/master.zip"
