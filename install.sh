@@ -62,7 +62,8 @@ function installDep(){
 	mv install-octopi.sh klipper/scripts/install-octopi.sh
 	./klipper/scripts/install-octopi.sh
 	echo -e "${green}###### Installation OK ######${white}"; echo
-
+	installPlugins
+    echo -e "${green}###### Installation Plugins OK ######${white}"; echo
 	main
 	
 }
@@ -71,11 +72,17 @@ function installPlugins(){
 	cd ~
 	cd OctoPrint
 	source venv/bin/activate
-    cp ~/.octoprint/config.yaml ~/.octoprint/config.yamlCP
 	pip install "https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/archive/master.zip"
 	pip install "https://github.com/LazeMSS/OctoPrint-UICustomizer/archive/main.zip"
 	pip install "https://github.com/QuinnDamerell/OctoPrint-OctoEverywhere/archive/master.zip"
 	sudo service octoprint restart
+	cp ~/.octoprint/config.yaml ~/config.yaml
+    mv ~/.octoprint/config.yaml ~/.octoprint/config.yamlCP
+	cd ~
+	python3 updateconfig.py
+	cp new.yaml ~/.octoprint/config.yaml
+  
+
 }
 
 function main() {

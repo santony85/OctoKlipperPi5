@@ -3,9 +3,20 @@ api:
 plugins:
   announcements:
     _config_version: 1
+    channels:
+      _blog:
+        read_until: 1727792400
+      _important:
+        read_until: 1698310200
+      _octopi:
+        read_until: 1684929600
+      _plugins:
+        read_until: 1728345600
+      _releases:
+        read_until: 1718697600
   bedlevelvisualizer:
     _config_version: 1
-    command: 
+    command: |
       @BEDLEVELVISUALIZER
       BED_MESH_CLEAR
       G28
@@ -22,6 +33,11 @@ plugins:
     upnpUuid: e67b6d4e-1af1-4d54-812e-3a7c4e0f8a3c
   errortracking:
     unique_id: 74323919-ba80-4e2a-a601-7320b39cd536
+  filamentsensorsimplified:
+    cmd_action: '0'
+    gpio_mode: '10'
+    power: '0'
+    triggered: '0'
   gcodeviewer:
     _config_version: 1
   klipper:
@@ -41,6 +57,10 @@ plugins:
     PluginUpdateRequired: false
     PluginVersion: 3.6.3
     PrinterKey: 0V0RV66J58H15CN4FTE548T7YHMM3C9IVNX5H7HE7OPC5PLI4ZI4RQ6KN043
+  powerfailure:
+    auto_continue: true
+    wizard_version: 2
+    z_homing_height: '0'
   softwareupdate:
     _config_version: 9
   tracking:
@@ -60,6 +80,7 @@ server:
     serverRestartCommand: sudo service octoprint restart
     systemRestartCommand: sudo shutdown -r now
     systemShutdownCommand: sudo shutdown -h now
+  firstRun: false
   onlineCheck:
     enabled: true
   pluginBlacklist:
