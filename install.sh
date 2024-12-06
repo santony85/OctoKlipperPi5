@@ -31,9 +31,6 @@ function installDep(){
 	pip install --upgrade pip wheel
 	pip install octoprint
 	pip install "https://github.com/thelastWallE/OctoprintKlipperPlugin/archive/master.zip"
-	pip install "https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/archive/master.zip"
-	pip install "https://github.com/LazeMSS/OctoPrint-UICustomizer/archive/main.zip"
-	pip install "https://github.com/QuinnDamerell/OctoPrint-OctoEverywhere/archive/master.zip"
 	sudo usermod -a -G tty octopi
 	sudo usermod -a -G dialout octopi
 	cd ~
@@ -64,12 +61,21 @@ function installDep(){
 	chmod 777 install-octopi.sh
 	mv install-octopi.sh klipper/scripts/install-octopi.sh
 	./klipper/scripts/install-octopi.sh
-	mv .octoprint/config.yaml .octoprint/config.yamlCP
-    mv config.yaml .octoprint/config.yaml 
 	echo -e "${green}###### Installation OK ######${white}"; echo
 
 	main
 	
+}
+
+function installPlugins(){
+	cd ~
+	cd OctoPrint
+	source venv/bin/activate
+    cp ~/.octoprint/config.yaml ~/.octoprint/config.yamlCP
+	pip install "https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/archive/master.zip"
+	pip install "https://github.com/LazeMSS/OctoPrint-UICustomizer/archive/main.zip"
+	pip install "https://github.com/QuinnDamerell/OctoPrint-OctoEverywhere/archive/master.zip"
+	sudo service octoprint restart
 }
 
 function main() {

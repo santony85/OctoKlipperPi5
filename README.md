@@ -6,6 +6,9 @@
 
 ###
 
+	mv .octoprint/config.yaml .octoprint/config.yamlCP
+    mv config.yaml .octoprint/config.yaml 
+
 <div align="center">
   <img height="400" src="img/p1.png"  />
 </div>

@@ -5,7 +5,7 @@ plugins:
     _config_version: 1
   bedlevelvisualizer:
     _config_version: 1
-    command: |
+    command: 
       @BEDLEVELVISUALIZER
       BED_MESH_CLEAR
       G28
@@ -60,7 +60,6 @@ server:
     serverRestartCommand: sudo service octoprint restart
     systemRestartCommand: sudo shutdown -r now
     systemShutdownCommand: sudo shutdown -h now
-  firstRun: false
   onlineCheck:
     enabled: true
   pluginBlacklist:
