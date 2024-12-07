@@ -62,7 +62,9 @@ KLIPPY_USER=$USER
 
 KLIPPY_EXEC=${PYTHONDIR}/bin/python
 
+#KLIPPY_ARGS="${SRCDIR}/klippy/klippy.py ${HOME}/printer.cfg -l /tmp/klippy.log"
 KLIPPY_ARGS="${SRCDIR}/klippy/klippy.py ${HOME}/printer.cfg -a /tmp/klippy_uds -l /tmp/klippy.log"
+
 
 EOF
 }

@@ -82,6 +82,7 @@ function installPlugins(){
 	cd ~
 	python3 updateconfig.py
 	cp new.yaml ~/.octoprint/config.yaml
+	sudo service octoprint restart
   
 
 }
