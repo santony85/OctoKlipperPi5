@@ -8,6 +8,9 @@
 
 	mv .octoprint/config.yaml .octoprint/config.yamlCP
     mv config.yaml .octoprint/config.yaml 
+G28
+    PROBE_CALIBRATE
+TESTZ Z=
 
 <div align="center">
   <img height="400" src="img/p1.png"  />

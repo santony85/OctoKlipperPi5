@@ -24,6 +24,12 @@ function installDep(){
 	cd ~
 	sudo apt update
 	sudo apt -y upgrade
+	mkdir ~/printer_data
+    mkdir ~/printer_data/logs
+    mkdir ~/printer_data/config  
+	mkdir ~/printer_data/gcodes
+	mkdir ~/printer_data/comms
+	cp printer.cfg ~/printer_data/config
 	sudo apt install -y python3 python3-pip python3-dev python3-setuptools python3-venv git libyaml-dev build-essential libffi-dev libssl-dev
 	mkdir OctoPrint && cd OctoPrint
 	python3 -m venv venv
