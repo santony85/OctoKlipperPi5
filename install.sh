@@ -23,7 +23,7 @@ function uninstall(){
 function installDep(){
 	cd ~
 	sudo apt update
-	sudo apt upgrade
+	sudo apt -y upgrade
 	sudo apt install -y python3 python3-pip python3-dev python3-setuptools python3-venv git libyaml-dev build-essential libffi-dev libssl-dev
 	mkdir OctoPrint && cd OctoPrint
 	python3 -m venv venv
@@ -72,7 +72,7 @@ function installPlugins(){
 	cd ~
 	cd OctoPrint
 	source venv/bin/activate
-	 pip install yaml --break-system-packages
+	pip install pyyaml --break-system-packages
 	pip install "https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/archive/master.zip"
 	pip install "https://github.com/LazeMSS/OctoPrint-UICustomizer/archive/main.zip"
 	pip install "https://github.com/QuinnDamerell/OctoPrint-OctoEverywhere/archive/master.zip"
