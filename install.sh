@@ -22,6 +22,8 @@ function uninstall(){
 
 function installDep(){
 	cd ~
+	sudo chmod 777 *.sh
+	sudo chmod 777 *.py
 	sudo apt update
 	sudo apt -y upgrade
 	mkdir ~/printer_data

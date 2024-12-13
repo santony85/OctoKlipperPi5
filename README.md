@@ -9,7 +9,7 @@
 	mv .octoprint/config.yaml .octoprint/config.yamlCP
     mv config.yaml .octoprint/config.yaml 
 G28
-    PROBE_CALIBRATE
+PROBE_CALIBRATE
 TESTZ Z=
 
 <div align="center">
